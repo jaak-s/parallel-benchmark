@@ -32,9 +32,9 @@ int main(int argc, char** argv) {
     f2[i] = cos( (double) 2*i);
   } 
 
-  double sum = 0.0;
 
   while (1) {
+    double sum = 0.0;
     timing(&wct_start, &cput_start);
     for (j = 0; j < iter; j++) {
 #pragma omp parallel for reduction(+:sum) schedule(static)
