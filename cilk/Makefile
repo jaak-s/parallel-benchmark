@@ -5,7 +5,7 @@ CC	= icc
 #
 #
 COMP	= -I/usr/include/x86_64-linux-gnu/c++/4.8
-COPTS	=  -O3 -xHost -fno-inline -fno-alias
+COPTS	= -O3 -fno-alias -xHost # -fno-inline
 #
 #
 NOLINK= -c
@@ -22,7 +22,7 @@ normsq: normsq.o
 dot: dot.o
 	$(CC) $(COMP) -o dot dot.o
 
-%.o: %.c
+%.o: %.cpp
 	$(CC) $(COPTS) $(COMP) $(NOLINK) $<
 
 clean:
