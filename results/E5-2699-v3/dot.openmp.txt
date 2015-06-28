@@ -1,0 +1,16 @@
+1	size:	5000000	time/iter:	0.005989	GFLOP/s:	0.834894
+2	size:	5000000	time/iter:	0.003135	GFLOP/s:	1.594746
+3	size:	5000000	time/iter:	0.001451	GFLOP/s:	3.445986
+4	size:	5000000	time/iter:	0.001320	GFLOP/s:	3.787450
+5	size:	5000000	time/iter:	0.000830	GFLOP/s:	6.022749
+6	size:	5000000	time/iter:	0.000915	GFLOP/s:	5.463792
+7	size:	5000000	time/iter:	0.000857	GFLOP/s:	5.835469
+8	size:	5000000	time/iter:	0.000689	GFLOP/s:	7.258873
+9	size:	5000000	time/iter:	0.000580	GFLOP/s:	8.618379
+10	size:	5000000	time/iter:	0.000340	GFLOP/s:	14.716086
+11	size:	5000000	time/iter:	0.000431	GFLOP/s:	11.609667
+12	size:	5000000	time/iter:	0.000575	GFLOP/s:	8.702300
+13	size:	5000000	time/iter:	0.000386	GFLOP/s:	12.968154
+14	size:	5000000	time/iter:	0.000367	GFLOP/s:	13.607453
+15	size:	5000000	time/iter:	0.000387	GFLOP/s:	12.921455
+16	size:	5000000	time/iter:	0.000362	GFLOP/s:	13.810793
