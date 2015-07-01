@@ -20,11 +20,11 @@ Setup:
 * If run took less 4 seconds, the number of iterations was doubled until 4 seconds was reached.
 
 ## Dot results
-<img src="https://raw.githubusercontent.com/jaak-s/parallel-benchmark/master/results/E5-2699-v3-5x/dot.gflops.png" width="640">
+<img src="https://raw.githubusercontent.com/jaak-s/parallel-benchmark/master/results/E5-2699-v3-5x/dot.gflops.png" width="480">
 
 ## Normsq results
-<img src="https://raw.githubusercontent.com/jaak-s/parallel-benchmark/master/results/E5-2699-v3-5x/normsq.gflops.png" width="640">
+<img src="https://raw.githubusercontent.com/jaak-s/parallel-benchmark/master/results/E5-2699-v3-5x/normsq.gflops.png" width="480">
 
 ## Sum results
-<img src="https://raw.githubusercontent.com/jaak-s/parallel-benchmark/master/results/E5-2699-v3-5x/sum.gflops.png" width="640">
+<img src="https://raw.githubusercontent.com/jaak-s/parallel-benchmark/master/results/E5-2699-v3-5x/sum.gflops.png" width="480">
 
