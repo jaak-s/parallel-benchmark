@@ -5,7 +5,7 @@ CC	= g++-5
 #
 #
 COMP	= -fcilkplus -lm
-COPTS	=  -O3 -fno-inline -fstrict-aliasing
+COPTS	=  -O3 -fstrict-aliasing
 #
 #
 NOLINK= -c
