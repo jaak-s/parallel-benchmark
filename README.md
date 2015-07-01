@@ -7,7 +7,6 @@ Following micro-benchmarks are implemented:
 * *sum* - element-wise sum of two vectors
 
 ## Setup
-Setup:
 * System: Dual Intel Xeon E5-2699-v3 node.
 * Compiler: Intel icc 14
 * Compiler options:
