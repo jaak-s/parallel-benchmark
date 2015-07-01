@@ -12,7 +12,7 @@ Setup:
 * Compiler: Intel icc 14
 * Compiler options:
   * OpenMP: `-O3 -xHost -fno-inline -fno-alias`
-  * CILK: `copts  = -o3 -fno-alias -xHost`
+  * CILK: `-O3 -fno-alias -xHost`
 
     Note: `fno-alias` was removed because it reduced CILK performance significantly
 

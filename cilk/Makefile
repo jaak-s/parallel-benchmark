@@ -5,7 +5,7 @@ CC	= icc
 #
 #
 COMP	= -I/usr/include/x86_64-linux-gnu/c++/4.8
-copts	= -o3 -fno-alias -xHost # -fno-inline
+copts	= -O3 -fno-alias -xHost # -fno-inline
 #
 #
 NOLINK= -c
