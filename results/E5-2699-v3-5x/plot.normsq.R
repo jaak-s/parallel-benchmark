@@ -26,6 +26,6 @@ ggplot( data=dot.sd, aes(y = mean, x = Ncores, color=method) ) +
   geom_point() + geom_line() + 
   geom_errorbar(mapping = aes(ymax = mean + sd, ymin = mean - sd), alpha=0.6) +
   ylab("Mean GFLOP/s") +
-  ggtitle("Dot product of two vectors of 5M doubles")
+  ggtitle(plot_title)
 
 ggsave(out, width=5, height=5)
