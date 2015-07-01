@@ -20,6 +20,14 @@ Following micro-benchmarks are implemented:
 * Each run was repeated 5 times.
 
 ## Dot results
+```c
+// openmp implementation:
+double sum = 0.0;
+#pragma omp parallel for reduction(+:sum) schedule(static)
+for (i = 0; i < size; i++) {
+  sum += f1[i]*f2[i];
+}
+```
 <img src="https://raw.githubusercontent.com/jaak-s/parallel-benchmark/master/results/E5-2699-v3-5x/dot.gflops.png" width="480">
 
 ## Normsq results
