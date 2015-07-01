@@ -10,13 +10,14 @@ Following micro-benchmarks are implemented:
 * System: Dual Intel Xeon E5-2699-v3 node.
 * Compiler: Intel icc 14
 * Compiler options:
-  * OpenMP: `-O3 -xHost -fno-inline -fno-alias`
-  * CILK: `-O3 -fno-alias -xHost`
+  * OpenMP: `-O3 -xHost -fno-alias -fno-inline`
+  * CILK: `-O3 -xHost -fno-alias`
 
     Note: `fno-alias` was removed because it reduced CILK performance significantly
 
 * Each benchmark was iterated 1000 times for one run.
-* If run took less 4 seconds, the number of iterations was doubled until 4 seconds was reached.
+* If a run took less 4 seconds, it was re-run with double number of iterations, until 4 seconds was reached.
+* Each run was repeated 5 times.
 
 ## Dot results
 <img src="https://raw.githubusercontent.com/jaak-s/parallel-benchmark/master/results/E5-2699-v3-5x/dot.gflops.png" width="480">
