@@ -30,6 +30,7 @@ int main(int argc, char **argv)
   f2 = new double[size];
 
   // Initialize arrays
+#pragma cilk grainsize = size / 160
   cilk_for (int i = 0; i < size; i++)
   {
       f1[i] = sin( (double) i*i );
@@ -40,6 +41,7 @@ int main(int argc, char **argv)
     cilk::reducer< cilk::op_add<double> > dot(0.0);
     timing(&wct_start, &cput_start);
     for (int j = 0; j < iter; j++) {
+#pragma cilk grainsize = size / 160
        cilk_for(int i = 0; i < size; i++) {
           *dot += f1[i] * f2[i];
        }

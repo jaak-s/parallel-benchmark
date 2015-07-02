@@ -4,7 +4,7 @@ BHOME	=$(PWD)
 CC	= g++-5
 #
 #
-COMP	= -fcilkplus -lm
+COMP	= -fcilkplus -lcilkrts -lm
 COPTS	=  -O3 -fstrict-aliasing
 #
 #

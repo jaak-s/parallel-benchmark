@@ -30,6 +30,7 @@ int main(int argc, char **argv)
   f2 = new double[size];
 
   // Initialize arrays
+#pragma cilk grainsize = size / 160
   cilk_for (int i = 0; i < size; i++)
   {
       f1[i] = sin( (double) i*i );
@@ -39,6 +40,7 @@ int main(int argc, char **argv)
   while (1) {
     timing(&wct_start, &cput_start);
     for (int j = 0; j < iter; j++) {
+#pragma cilk grainsize = size / 160
        cilk_for(int i = 0; i < size; i++) {
           f1[i] += f2[i];
        }
