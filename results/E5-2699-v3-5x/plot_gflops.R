@@ -19,26 +19,26 @@ plot_gflops <- function(file.openmp, file.cilk, plot_title, outfile) {
   
   dot.sd = ddply(dot, .(method, Ncores), summarize, sd = sd(GFLOPs), mean = mean(GFLOPs))
   
-  ggplot( data=dot.sd, aes(y = mean, x = Ncores, color=method) ) +
+  p <- ggplot( data=dot.sd, aes(y = mean, x = Ncores, color=method) ) +
     geom_point() + geom_line() + 
     geom_errorbar(mapping = aes(ymax = mean + sd, ymin = mean - sd), alpha=0.6) +
     ylab("Mean GFLOP/s") +
     ggtitle(plot_title)
   
-  ggsave(outfile, width=6, height=5)
+  ggsave(filename=outfile, plot=p, width=6, height=5)
 }
 
-plot(file.openmp = "normsq.openmp.txt",
-     file.cilk   = "normsq.cilk.txt",
-     plot_title  = "Norm squared of one 5M double vector",
-     outfile     = "normsq.gflops.png")
+plot_gflops(file.openmp = "normsq.openmp.txt",
+            file.cilk   = "normsq.cilk.txt",
+            plot_title  = "Norm squared of one 5M double vector",
+            outfile     = "normsq.gflops.png")
 
-plot(file.openmp = "dot.openmp.txt",
-     file.cilk   = "dot.cilk.txt",
-     plot_title  = "Dot product of two 5M double vectors",
-     outfile     = "dot.gflops.png")
+plot_gflops(file.openmp = "dot.openmp.txt",
+            file.cilk   = "dot.cilk.txt",
+            plot_title  = "Dot product of two 5M double vectors",
+            outfile     = "dot.gflops.png")
 
-plot(file.openmp = "sum.openmp.txt",
-     file.cilk   = "sum.cilk.txt",
-     plot_title  = "Element-wise sum of two 5M double vectors",
-     outfile     = "sum.gflops.png")
+plot_gflops(file.openmp = "sum.openmp.txt",
+            file.cilk   = "sum.cilk.txt",
+            plot_title  = "Element-wise sum of two 5M double vectors",
+            outfile     = "sum.gflops.png")
