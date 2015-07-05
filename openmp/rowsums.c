@@ -57,14 +57,17 @@ int main(int argc, char** argv) {
       for (i = 0; i < nrows; i++) {
         rsum[i] = 0.0;
       }
-#pragma omp parallel private(my_rsum, i) shared(rsum)
+#pragma omp parallel private(my_rsum, i, j) shared(rsum)
 {
       for (i = 0; i < nrows; i++) {
         my_rsum[i] = 0.0;
       }
 #pragma omp for schedule(static)
-      for (i = 0; i < size; i++) {
-        my_rsum[i % nrows] += f1[i];
+      for (i = 0; i < ncols; i++) {
+        k = i * nrows;
+        for (j = 0; j < nrows; j++, k++) {
+          my_rsum[j] += f1[k];
+        }
       }
 #pragma omp critical
       for (i = 0; i < nrows; i++) {
