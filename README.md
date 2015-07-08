@@ -14,7 +14,7 @@ Following micro-benchmarks are implemented:
   * OpenMP: `-O3 -xHost -fno-alias -fno-inline`
   * CILK: `-O3 -xHost -fno-alias`
 * Each benchmark was iterated 1000 times for one run.
-* If a run took less 4 seconds, its number of iterations was doubled, until 4 seconds was reached.
+* If a run took less than 4 seconds, its number of iterations was doubled, until reaching 4 seconds.
 * Each run was repeated 5 times.
 
 ## Compiling and running
