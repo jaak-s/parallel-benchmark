@@ -36,7 +36,7 @@ for (i = 0; i < size; i++) {
 <img src="https://raw.githubusercontent.com/jaak-s/parallel-benchmark/master/results/E5-2699-v3-5x/dot.gflops.png" width="480">
 
 ## Normsq results
-```
+```c
 double sum = 0.0;
 #pragma omp parallel for reduction(+:sum) schedule(static)
 for (i = 0; i < size; i++) {
